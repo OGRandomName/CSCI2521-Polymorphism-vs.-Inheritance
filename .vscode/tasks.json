@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C/C++: build Lab10 with MSVC",
+            "type": "process",
+            "command": "cmd.exe",
+            "args": [
+                "/d",
+                "/c",
+                "call",
+                "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Auxiliary\\Build\\vcvars64.bat",
+                "&&",
+                "cd",
+                "/d",
+                "${workspaceFolder}",
+                "&&",
+                "cl.exe",
+                "/EHsc",
+                "/W4",
+                "/std:c++17",
+                "/Fe:Lab10_Kcherry8.exe",
+                "Lab10_Kcherry8.cpp",
+                "Account.cpp",
+                "Customer.cpp",
+                "SavingsAccount.cpp"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
